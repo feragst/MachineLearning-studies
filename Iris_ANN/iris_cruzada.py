@@ -37,7 +37,7 @@ def criarRede():
 classificador = KerasClassifier(build_fn=criarRede, epochs = 150, batch_size = 10)
 
 resultados = cross_val_score(estimator=classificador, X=previsores, y=classe_dummy, 
-                             cv=10, scoring = 'accuracy')
+                             cv=10, scoring ='accuracy')
 
 media = resultados.mean()
 desvio = resultados.std()
