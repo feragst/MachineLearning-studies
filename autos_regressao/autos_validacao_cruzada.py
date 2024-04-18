@@ -65,7 +65,7 @@ regressor = KerasRegressor(build_fn = criar_rede,
 
 resultados = cross_val_score(estimator = regressor,
                              X = previsores, y = preco_real,
-                             cv = 10, scoring = 'neg_mean_absolute_error')
+                             cv = 3, scoring = 'neg_mean_absolute_error')
 
 media = resultados.mean()
 desvio = resultados.std()
