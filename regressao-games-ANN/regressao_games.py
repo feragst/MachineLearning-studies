@@ -42,8 +42,8 @@ previsores = column_transformer.fit_transform(previsores).toarray()
 #estrutura da rede neural
 
 camada_entrada = Input(shape =(70, ))
-camada_oculta1 = Dense(units = 36, activation = 'sigmoid')(camada_entrada)
-camada_oculta2 = Dense(units = 36, activation = 'sigmoid')(camada_oculta1)
+camada_oculta1 = Dense(units = 32, activation = 'sigmoid')(camada_entrada)
+camada_oculta2 = Dense(units = 32, activation = 'sigmoid')(camada_oculta1)
 camada_saida1 = Dense(units = 1, activation = 'linear')(camada_oculta2)
 camada_saida2 = Dense(units = 1, activation = 'linear')(camada_oculta2)
 camada_saida3 = Dense(units = 1, activation = 'linear')(camada_oculta2)
